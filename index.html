@@ -1225,45 +1225,13 @@
         </div>
       </div>
     </div>
-    <div class="contact-form">
+    <div class="contact-form" style="text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1.5rem;">
       <h3>Request a Free Quote</h3>
-      <div class="form-group">
-        <label>Your Name</label>
-        <input type="text" id="wa-name" placeholder="John Murphy">
-      </div>
-      <div class="form-group">
-        <label>Phone Number</label>
-        <input type="tel" id="wa-phone" placeholder="08x xxx xxxx">
-      </div>
-      <div class="form-group">
-        <label>Tell us what needs removing</label>
-        <textarea id="wa-message" placeholder="Describe what you'd like removed — or send us a photo via WhatsApp!"></textarea>
-      </div>
-      <button class="btn-primary" style="width:100%;justify-content:center" onclick="sendToWhatsApp()">💬 Send via WhatsApp</button>
+      <p style="color:#aaa; font-size:1.05rem; max-width:360px;">Message us on WhatsApp and we'll get back to you fast with a price.</p>
+      <a href="https://wa.me/353874422116" target="_blank" class="btn-primary" style="justify-content:center;">💬 Send via WhatsApp</a>
     </div>
   </div>
 </section>
-
-<script>
-function sendToWhatsApp() {
-  const name    = document.getElementById('wa-name').value.trim();
-  const phone   = document.getElementById('wa-phone').value.trim();
-  const message = document.getElementById('wa-message').value.trim();
-
-  if (!name && !message) {
-    alert('Please fill in at least your name and what needs removing.');
-    return;
-  }
-
-  let text = '👋 Hi, I'd like a quote!\n\n';
-  if (name)    text += '🙋 Name: ' + name + '\n';
-  if (phone)   text += '📞 Phone: ' + phone + '\n';
-  if (message) text += '🗑️ Details: ' + message;
-
-  const url = 'https://wa.me/353874422116?text=' + encodeURIComponent(text);
-  window.open(url, '_blank');
-}
-</script>
 
 <!-- FOOTER -->
 <footer>
