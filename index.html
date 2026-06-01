@@ -870,6 +870,153 @@
     font-size: 0.78rem;
   }
 
+  /* TRUST BADGES */
+  .trust-bar {
+    background: var(--white);
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 20px 40px;
+  }
+
+  .trust-bar-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 50px;
+    padding: 10px 18px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--blue-900);
+  }
+
+  .trust-badge .badge-icon {
+    font-size: 1.1rem;
+  }
+
+  /* PRICING TABLE */
+  .pricing-table {
+    padding: 80px 40px;
+    background: var(--white);
+  }
+
+  .pricing-grid {
+    max-width: 900px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .pricing-card {
+    border: 1.5px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    background: var(--white);
+    transition: transform 0.2s;
+  }
+
+  .pricing-card:hover { transform: translateY(-4px); }
+
+  .pricing-card.featured {
+    border-color: var(--accent);
+    border-width: 2px;
+    position: relative;
+  }
+
+  .pricing-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 50px;
+    white-space: nowrap;
+  }
+
+  .pricing-icon { font-size: 2rem; margin-bottom: 12px; }
+  .pricing-label { font-size: 0.85rem; color: #64748b; margin-bottom: 6px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+  .pricing-amount { font-size: 2.4rem; font-weight: 800; color: var(--blue-900); margin-bottom: 6px; }
+  .pricing-desc { font-size: 0.85rem; color: #64748b; }
+
+  /* REVIEWS */
+  .reviews-section {
+    padding: 80px 40px;
+    background: #f8fafc;
+  }
+
+  .reviews-grid {
+    max-width: 900px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+
+  .review-card {
+    background: var(--white);
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+  }
+
+  .review-stars { font-size: 1rem; margin-bottom: 12px; color: #f59e0b; }
+  .review-text { font-size: 0.95rem; line-height: 1.6; color: #374151; margin-bottom: 14px; font-style: italic; }
+  .review-author { font-size: 0.85rem; font-weight: 600; color: #64748b; }
+
+  /* FAQ */
+  .faq-section {
+    padding: 80px 40px;
+    background: var(--white);
+  }
+
+  .faq-list {
+    max-width: 720px;
+    margin: 40px auto 0;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 20px 0;
+  }
+
+  .faq-item:last-child { border-bottom: none; }
+
+  .faq-q {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    margin-bottom: 8px;
+  }
+
+  .faq-a {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  @media (max-width: 860px) {
+    .pricing-grid { grid-template-columns: 1fr; max-width: 360px; }
+    .trust-bar { padding: 16px 20px; }
+    .pricing-table, .reviews-section, .faq-section { padding: 60px 24px; }
+  }
+
   /* HAMBURGER MENU */
   .hamburger {
     display: none;
@@ -1277,6 +1424,17 @@
 
 
 
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-badge"><span class="badge-icon">⭐</span> 5.0 on Google — 7 Reviews</div>
+    <div class="trust-badge"><span class="badge-icon">🛡️</span> Fully Licensed</div>
+    <div class="trust-badge"><span class="badge-icon">⚡</span> Same Day Available</div>
+    <div class="trust-badge"><span class="badge-icon">♻️</span> Eco Friendly Disposal</div>
+    <div class="trust-badge"><span class="badge-icon">🏆</span> Cheaper Than a Skip</div>
+  </div>
+</div>
+
 <!-- SERVICES -->
 <section class="services" id="services">
   <div class="section-header">
@@ -1422,8 +1580,8 @@
       <p>Our team takes care of all the heavy lifting and leaves every job site clean and tidy. We recycle wherever possible and are committed to responsible, environmentally conscious waste disposal.</p>
       <div class="about-stat-row">
         <div class="about-stat">
-          <div class="about-stat-num">500+</div>
-          <div class="about-stat-label">Happy Customers</div>
+          <div class="about-stat-num">5 ★</div>
+          <div class="about-stat-label">Google Rated</div>
         </div>
         <div class="about-stat">
           <div class="about-stat-num">100%</div>
@@ -1445,6 +1603,97 @@
   <p class="quote-desc">Not sure what you need? Send us a photo or video of the job and we'll come back to you with a straight-up price — no fuss.</p>
   <div class="quote-buttons">
     <a href="https://wa.me/353874422116" class="btn-primary">💬 WhatsApp Us</a>
+  </div>
+</section>
+
+<!-- PRICING TABLE -->
+<section class="pricing-table">
+  <div class="section-header">
+    <div class="section-label">Simple Pricing</div>
+    <h2 class="section-title">Clear <em>Flat Prices</em></h2>
+    <p class="section-desc">No hidden fees. No surprises. Just honest pricing.</p>
+  </div>
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <div class="pricing-icon">🛋️</div>
+      <div class="pricing-label">Single item</div>
+      <div class="pricing-amount">€69</div>
+      <div class="pricing-desc">Sofa, mattress, fridge, washing machine or similar</div>
+    </div>
+    <div class="pricing-card featured">
+      <div class="pricing-badge">Most Popular</div>
+      <div class="pricing-icon">🚛</div>
+      <div class="pricing-label">Half truck</div>
+      <div class="pricing-amount">€185</div>
+      <div class="pricing-desc">Small clearout, few pieces of furniture, garden waste</div>
+    </div>
+    <div class="pricing-card">
+      <div class="pricing-icon">🏠</div>
+      <div class="pricing-label">Full truck</div>
+      <div class="pricing-amount">€299</div>
+      <div class="pricing-desc">Full house clearance, large volume, business clearout</div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section">
+  <div class="section-header">
+    <div class="section-label">What Customers Say</div>
+    <h2 class="section-title">Rated <em>5 Stars</em> on Google</h2>
+    <p class="section-desc">Don't take our word for it.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Very helpful service, guys done a great job I can't complain. Thanks a mil. Highly recommend this crowd."</p>
+      <div class="review-author">T.J. — Google Review</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Fast, efficient and reasonably priced. Showed up on time, took everything away no problem. Would definitely use again."</p>
+      <div class="review-author">Joseph B. — Google Review</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Brilliant service. Cleared out the whole garage in no time. Fair price and very professional. 100% recommend."</p>
+      <div class="review-author">Google Review</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="section-header">
+    <div class="section-label">Questions</div>
+    <h2 class="section-title">Frequently <em>Asked</em></h2>
+    <p class="section-desc">Everything you need to know before booking.</p>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q">How much does rubbish removal cost in Kilkenny?</div>
+      <p class="faq-a">Single items start from €69, half truck loads from €185, and full truck loads from €299. All prices include labour and disposal — no hidden fees.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do you take all types of rubbish?</div>
+      <p class="faq-a">Yes — furniture, mattresses, garden waste, general household junk, appliances and more. WhatsApp us a photo if you're unsure and we'll let you know straight away.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How do I book a collection?</div>
+      <p class="faq-a">Just WhatsApp us on 087 442 2116. Send a photo of what needs collecting and we'll give you a quote within minutes. Same day and next day bookings available.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do you cover Waterford and Carlow?</div>
+      <p class="faq-a">Yes, we cover Kilkenny, Carlow and Waterford. We serve the whole South East of Ireland — get in touch and we'll confirm your area.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is it cheaper than hiring a skip?</div>
+      <p class="faq-a">In most cases yes — and unlike a skip, we do all the loading ourselves. You don't have to lift a finger. No permit needed, no skip sitting outside your house for days.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Are you licensed to dispose of waste?</div>
+      <p class="faq-a">Yes, we are fully licensed waste collectors. All waste is disposed of responsibly and in line with Irish regulations.</p>
+    </div>
   </div>
 </section>
 
