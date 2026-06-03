@@ -4,13 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Universal Rubbish Removal IE | Rubbish Removal Kilkenny &amp; South East Ireland</title>
-<meta name="description" content="Professional rubbish removal across Kilkenny and the South East of Ireland. Single items from €69, half truck €185, full truck €299. We do all the heavy lifting. Book via WhatsApp today!">
+<meta name="description" content="Professional rubbish removal across Kilkenny and the South East of Ireland. Single items from €69, mattress removal from €70, half truck €185, full truck €299. We do all the heavy lifting. Book via WhatsApp today!">
 <meta name="keywords" content="rubbish removal Kilkenny, junk removal Kilkenny, waste removal Kilkenny, rubbish removal South East Ireland, mattress removal Kilkenny, furniture removal Kilkenny, cheap rubbish removal Ireland">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Universal Rubbish Removal IE">
 <link rel="canonical" href="https://universalrubbishremoval.ie">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="apple-touch-icon" href="/favicon-192.png">
+<link rel="icon" type="image/x-icon" href="./favicon.ico">
+<link rel="icon" type="image/png" sizes="192x192" href="./favicon-192.png">
+<link rel="apple-touch-icon" href="./favicon-192.png">
 <meta property="og:title" content="Universal Rubbish Removal IE | Kilkenny &amp; South East">
 <meta property="og:description" content="Fast, affordable rubbish removal across Kilkenny and the South East. From €69. We do all the heavy lifting!">
 <meta property="og:type" content="website">
@@ -39,16 +40,47 @@
   "sameAs": ["https://wa.me/353874422116"]
 }
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18181628693"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'AW-18181628693');
+  function loadGA() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18181628693';
+    document.head.appendChild(s);
+    gtag('config', 'AW-18181628693');
+  }
+  if (localStorage.getItem('cookieConsent') === 'accepted') { loadGA(); }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
+/* ===== COOKIE BANNER ===== */
+#cookie-banner{
+  position:fixed;bottom:0;left:0;right:0;z-index:99999;
+  background:#0D2B52;border-top:2px solid #2563EB;
+  padding:16px 20px;display:flex;flex-wrap:wrap;align-items:center;
+  gap:12px;font-size:.82rem;color:#bfdbfe;
+  padding-bottom:max(16px,env(safe-area-inset-bottom));
+}
+#cookie-banner p{flex:1;min-width:200px;margin:0;line-height:1.5}
+#cookie-banner a{color:#60a5fa;text-decoration:underline}
+#cookie-banner a:hover{color:#fff}
+.cookie-btns{display:flex;gap:8px;flex-shrink:0}
+.cookie-accept{
+  background:#2563EB;color:#fff;padding:9px 18px;border-radius:7px;
+  font-size:.82rem;font-weight:700;border:none;cursor:pointer;
+  transition:filter .2s;
+}
+.cookie-accept:hover{filter:brightness(1.12)}
+.cookie-reject{
+  background:transparent;color:#bfdbfe;padding:9px 18px;border-radius:7px;
+  font-size:.82rem;font-weight:600;border:1px solid rgba(255,255,255,.25);
+  cursor:pointer;transition:border-color .2s,color .2s;
+}
+.cookie-reject:hover{border-color:rgba(255,255,255,.6);color:#fff}
+
 /* ===== RESET & ROOT ===== */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -1172,6 +1204,8 @@ footer{
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
     <a href="tel:0874422116">087 442 2116</a>
+    <a href="./privacy.html">Privacy Policy</a>
+    <a href="./terms.html">Terms</a>
   </nav>
   <div class="footer-copy">&copy; 2026 Universal Rubbish Removal IE. All rights reserved.</div>
 </footer>
@@ -1197,6 +1231,30 @@ footer{
         answer.hidden = false;
       }
     });
+  });
+})();
+</script>
+
+<div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" style="display:none">
+  <p>We use cookies to analyse site traffic via Google Analytics. By clicking <strong>Accept</strong> you consent to our use of cookies. See our <a href="./privacy.html">Privacy Policy</a> and <a href="./terms.html">Terms</a>.</p>
+  <div class="cookie-btns">
+    <button class="cookie-reject" id="cookie-reject">Reject</button>
+    <button class="cookie-accept" id="cookie-accept">Accept</button>
+  </div>
+</div>
+<script>
+(function(){
+  var banner = document.getElementById('cookie-banner');
+  var consent = localStorage.getItem('cookieConsent');
+  if (!consent) { banner.style.display = 'flex'; }
+  document.getElementById('cookie-accept').addEventListener('click', function(){
+    localStorage.setItem('cookieConsent', 'accepted');
+    banner.style.display = 'none';
+    loadGA();
+  });
+  document.getElementById('cookie-reject').addEventListener('click', function(){
+    localStorage.setItem('cookieConsent', 'rejected');
+    banner.style.display = 'none';
   });
 })();
 </script>
