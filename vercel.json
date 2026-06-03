@@ -1,4 +1,16 @@
 {
+  "redirects": [
+    {
+      "source": "/rubbish-removal-enniscorthy",
+      "destination": "/rubbish-removal-wexford",
+      "permanent": true
+    },
+    {
+      "source": "/rubbish-removal-enniscorthy/",
+      "destination": "/rubbish-removal-wexford/",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
