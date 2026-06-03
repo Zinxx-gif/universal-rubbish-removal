@@ -2,12 +2,32 @@
   "redirects": [
     {
       "source": "/rubbish-removal-enniscorthy",
-      "destination": "/rubbish-removal-wexford",
+      "destination": "/rubbish-removal-kilkenny",
       "permanent": true
     },
     {
       "source": "/rubbish-removal-enniscorthy/",
-      "destination": "/rubbish-removal-wexford/",
+      "destination": "/rubbish-removal-kilkenny/",
+      "permanent": true
+    },
+    {
+      "source": "/rubbish-removal-waterford",
+      "destination": "/rubbish-removal-kilkenny",
+      "permanent": true
+    },
+    {
+      "source": "/rubbish-removal-waterford/",
+      "destination": "/rubbish-removal-kilkenny/",
+      "permanent": true
+    },
+    {
+      "source": "/rubbish-removal-wexford",
+      "destination": "/rubbish-removal-kilkenny",
+      "permanent": true
+    },
+    {
+      "source": "/rubbish-removal-wexford/",
+      "destination": "/rubbish-removal-kilkenny/",
       "permanent": true
     }
   ],
