@@ -185,7 +185,8 @@ body{padding-bottom:70px}
 }
 .hero::after{
   content:'';position:absolute;inset:-12px;
-  background:url('hero.jpg') center/cover no-repeat;
+  background:-webkit-image-set(url('hero.webp') 1x,url('hero.jpg') 1x) center/cover no-repeat;
+  background:image-set(url('hero.webp') type('image/webp'),url('hero.jpg') type('image/jpeg')) center/cover no-repeat;
   filter:blur(4px);
   z-index:0;
 }
@@ -659,7 +660,7 @@ footer{
 @media(min-width:1024px){.local{padding:64px 48px}}
 
 /* Hero on location pages */
-.hero::after{background-image:url('../hero.jpg')}
+.hero::after{background:-webkit-image-set(url('../hero.webp') 1x,url('../hero.jpg') 1x) center/cover no-repeat;background:image-set(url('../hero.webp') type('image/webp'),url('../hero.jpg') type('image/jpeg')) center/cover no-repeat}
 .hero{padding-top:62px}
 @media(min-width:1024px){.hero{padding-top:68px}}
 </style>
