@@ -77,6 +77,14 @@
   cursor:pointer;transition:border-color .2s,color .2s;
 }
 .cookie-reject:hover{border-color:rgba(255,255,255,.6);color:#fff}
+@media(max-width:640px){
+  #cookie-banner{padding:10px 14px;gap:8px;transition:padding .2s}
+  #cookie-banner p{font-size:.75rem;line-height:1.4}
+  .cookie-accept,.cookie-reject{padding:7px 12px;font-size:.75rem}
+  #cookie-banner.cookie-mini{padding:8px 14px}
+  #cookie-banner.cookie-mini p{display:none}
+  #cookie-banner.cookie-mini .cookie-btns{width:100%;justify-content:center}
+}
 
 /* ===== RESET & ROOT ===== */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -931,6 +939,18 @@ footer{
     localStorage.setItem('cookieConsent', 'rejected');
     banner.style.display = 'none';
   });
+  if (window.innerWidth < 640 && !consent) {
+    var miniScrolled = false;
+    window.addEventListener('scroll', function(){
+      if (!miniScrolled && window.scrollY > 150) {
+        miniScrolled = true;
+        banner.classList.add('cookie-mini');
+      } else if (miniScrolled && window.scrollY <= 50) {
+        miniScrolled = false;
+        banner.classList.remove('cookie-mini');
+      }
+    }, {passive:true});
+  }
 })();
 </script>
 
