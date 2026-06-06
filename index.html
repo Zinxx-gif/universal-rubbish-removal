@@ -175,17 +175,25 @@ body{padding-bottom:70px}
 
 /* ===== HERO ===== */
 .hero{
-  background:linear-gradient(150deg,#071d38 0%,#0D2B52 45%,#1a4080 100%);
+  background:#0D2B52;
   padding:80px 16px 44px;position:relative;overflow:hidden;
+}
+.hero::after{
+  content:'';position:absolute;inset:-12px;
+  background:url('hero.jpg') center/cover no-repeat;
+  filter:blur(4px);
+  z-index:0;
 }
 .hero::before{
   content:'';position:absolute;inset:0;
-  background-image:
+  background:
     radial-gradient(ellipse 70% 50% at 80% 40%,rgba(37,99,235,.18) 0%,transparent 65%),
-    radial-gradient(ellipse 40% 40% at 10% 80%,rgba(37,99,235,.1) 0%,transparent 60%);
+    radial-gradient(ellipse 40% 40% at 10% 80%,rgba(37,99,235,.1) 0%,transparent 60%),
+    linear-gradient(rgba(13,43,82,.6),rgba(13,43,82,.6));
   pointer-events:none;
+  z-index:1;
 }
-.hero-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto}
+.hero-inner{position:relative;z-index:2;max-width:1100px;margin:0 auto}
 
 /* Hero proof row */
 .hero-proof{
@@ -663,12 +671,12 @@ footer{
     <div class="hero-left">
       <div class="hero-proof" aria-label="Customer rating">
         <span class="hero-stars" aria-hidden="true">★★★★★</span>
-        <span class="hero-proof-text">5.0 Google Rating &middot; 7 Reviews</span>
+        <span class="hero-proof-text">5.0 Google Rating &middot; 10 Reviews</span>
         <span class="hero-badge">Fully Licensed</span>
       </div>
       <h1 id="hero-heading" class="hero-title">
         Rubbish Removed
-        <em>Fast &amp; Affordable</em>
+        <em>One Call. All Gone.</em>
         In Kilkenny
       </h1>
       <p class="hero-tagline">No Skip. No Hassle. Gone Today.</p>
@@ -724,7 +732,7 @@ footer{
   <div class="trust-bar-inner">
     <div class="trust-item">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-      5.0 on Google &middot; 7 Reviews
+      5.0 on Google &middot; 10 Reviews
     </div>
     <div class="trust-item">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
