@@ -638,6 +638,32 @@ footer{
 
 /* Focus states */
 :focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:4px}
+
+/* ===== MICRO-INTERACTIONS ===== */
+.step,.service-card,.why-card,.pricing-card,.review-card,.area-card{
+  transition:border-color .22s,box-shadow .25s,transform .22s;
+}
+.step:hover{transform:translateY(-3px)}
+.service-card:hover{transform:translateY(-4px)}
+.why-card:hover{transform:translateY(-4px)}
+.pricing-card:hover{transform:translateY(-5px)}
+.review-card:hover{
+  border-color:var(--blue-light);box-shadow:var(--shadow-md);transform:translateY(-3px);
+}
+.area-card:hover{transform:translateY(-2px)}
+.btn-wa,.nav-wa,.service-btn,.btn-pricing,.btn-call,.btn-outline-blue,.cookie-accept{
+  transition:filter .18s,transform .15s,background .18s,border-color .18s,color .18s;
+}
+.btn-wa:active,.nav-wa:active,.service-btn:active,.btn-pricing:active{
+  transform:scale(0.96) translateY(0)!important;transition-duration:.08s;
+}
+.btn-call:active,.btn-outline-blue:active,.cookie-accept:active{
+  transform:scale(0.96)!important;transition-duration:.08s;
+}
+.faq-btn{transition:color .18s}
+.faq-btn:hover .faq-q{color:var(--blue)}
+.nav-wa:hover{transform:translateY(-1px)}
+.service-img img{transition:transform .4s ease}
 </style>
 </head>
 <body>
