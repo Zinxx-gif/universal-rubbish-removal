@@ -101,5 +101,17 @@ ul li{margin-bottom:6px}
   <p>We may update this policy from time to time. The "last updated" date at the top of this page will reflect any changes.</p>
 </main>
 
+<script>
+document.addEventListener('click', function(e) {
+  var a = e.target.closest('a');
+  if (!a) return;
+  var href = a.getAttribute('href') || '';
+  if (href.indexOf('tel:') === 0) {
+    gtag('event', 'conversion', {'send_to': 'AW-18181628693/BFt-CL-Dur8cEJXG1t1D'});
+  } else if (href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp') !== -1) {
+    gtag('event', 'conversion', {'send_to': 'AW-18181628693/GczxCMOQur8cEJXG1t1D'});
+  }
+});
+</script>
 </body>
 </html>
