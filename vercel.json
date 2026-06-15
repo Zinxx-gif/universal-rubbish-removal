@@ -54,6 +54,7 @@
     }
   ],
   "routes": [
+    { "src": "/review", "headers": { "Location": "https://g.page/r/CYFVFuNic5ZkEBM/review" }, "status": 302 },
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/404.html", "status": 404 }
   ]
