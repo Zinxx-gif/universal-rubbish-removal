@@ -29,6 +29,11 @@
       "source": "/rubbish-removal-wexford/",
       "destination": "/rubbish-removal-kilkenny/",
       "permanent": true
+    },
+    {
+      "source": "/review",
+      "destination": "https://g.page/r/CYFVFuNic5ZkEBM/review",
+      "permanent": false
     }
   ],
   "headers": [
