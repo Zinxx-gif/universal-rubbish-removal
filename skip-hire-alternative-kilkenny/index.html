@@ -635,6 +635,27 @@ footer{
   *{animation:none!important;transition:none!important}
 }
 
+/* ===== CHOOSER ===== */
+.chooser{padding:56px 16px;background:var(--gray-50)}
+.chooser-inner{max-width:900px;margin:0 auto}
+.chooser-head{text-align:center;margin-bottom:36px}
+.chooser-label{font-size:.7rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.chooser-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.9rem,5.5vw,3rem);font-weight:900;text-transform:uppercase;color:var(--navy);line-height:1.05}
+.chooser-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:24px}
+.chooser-card{border-radius:16px;padding:28px 24px}
+.chooser-card-skip{background:var(--navy)}
+.chooser-card-urr{background:var(--blue)}
+.chooser-card-title{font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:900;color:var(--white);text-transform:uppercase;margin-bottom:16px;letter-spacing:.3px}
+.chooser-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.chooser-list li{display:flex;align-items:flex-start;gap:10px;color:rgba(255,255,255,.9);font-size:.9rem;line-height:1.5}
+.chooser-dot{flex-shrink:0;width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);margin-top:6px}
+.chooser-card-urr .chooser-dot{background:rgba(255,255,255,.65)}
+.chooser-note{background:var(--navy);border-radius:var(--radius);padding:20px 24px;font-size:.9rem;color:#bfdbfe;line-height:1.75;text-align:center}
+.chooser-note a{color:#93c5fd;font-weight:600}
+.chooser-note a:hover{color:var(--white)}
+@media(min-width:640px){.chooser-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.chooser{padding:80px 48px}}
+
 /* ===== COMPARISON ===== */
 .comparison{padding:56px 16px;background:var(--gray-50)}
 .comparison-inner{max-width:900px;margin:0 auto}
@@ -868,6 +889,36 @@ footer{
         </div>
       </article>
     </div>
+  </div>
+</section>
+
+<section class="chooser" aria-labelledby="chooser-heading">
+  <div class="chooser-inner">
+    <div class="chooser-head">
+      <div class="chooser-label">Skip Hire or Rubbish Removal</div>
+      <h2 id="chooser-heading" class="chooser-title">Which Is Right for You?</h2>
+    </div>
+    <div class="chooser-grid">
+      <div class="chooser-card chooser-card-skip">
+        <div class="chooser-card-title">Skip Hire is best if:</div>
+        <ul class="chooser-list">
+          <li><span class="chooser-dot" aria-hidden="true"></span> You are doing ongoing renovation work</li>
+          <li><span class="chooser-dot" aria-hidden="true"></span> You want to load waste over several days</li>
+          <li><span class="chooser-dot" aria-hidden="true"></span> You have space on your drive for a skip</li>
+          <li><span class="chooser-dot" aria-hidden="true"></span> You need to dispose of heavy rubble or soil</li>
+        </ul>
+      </div>
+      <div class="chooser-card chooser-card-urr">
+        <div class="chooser-card-title">Rubbish Removal is best if:</div>
+        <ul class="chooser-list">
+          <li><span class="chooser-dot" aria-hidden="true"></span> You want waste gone the same day</li>
+          <li><span class="chooser-dot" aria-hidden="true"></span> You do not want a skip sitting outside</li>
+          <li><span class="chooser-dot" aria-hidden="true"></span> You want someone else to do all the lifting</li>
+          <li><span class="chooser-dot" aria-hidden="true"></span> You have items skips will not take</li>
+        </ul>
+      </div>
+    </div>
+    <p class="chooser-note">Not sure? We work with trusted local skip hire partners and can arrange a skip if that suits your job better. <a href="tel:0874422116">Call</a> or <a href="https://wa.me/353874422116">WhatsApp 087 442 2116</a> and we will advise you.</p>
   </div>
 </section>
 
